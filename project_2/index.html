@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BALAJI TRADERS</title>
+     <!-- BOOTSTRAP CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+     <!-- FONT AWESOME -->
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+     <style>
+          #header {
+               z-index: 3;
+               position: fixed;
+               background-color: red;
+          }
+
+          #logo {
+               width: 70px;
+               height: 70px;
+          }
+
+          .list_cont{
+               transform: translateX(-100%);
+               position: absolute;
+               z-index: 3;
+               background-color: #333;
+               height: 45vh;
+               transition: all 0.3s;
+               display: flex;
+               flex-direction: column;
+               
+          }
+          
+
+          #list-item {
+               margin: 0;
+               padding: 0;
+          }
+
+          #list-item li {
+               display: inline-block;
+          }
+
+          #list-item li a {
+               color: #fff;
+               display: block;
+          }
+
+          #list-item li a:hover {
+               background-color: skyblue;
+          }
+
+          /* BANNER */
+
+          #banner {
+               background-image: url('./images/bg-image.jpg');
+               background-repeat: no-repeat;
+               background-size: 100% 100%;
+               height: 70vh;
+          }
+
+          .card {
+               z-index: 2;
+               background-color: transparent;
+          }
+
+          #banner .card::before {
+               content: "";
+               position: absolute;
+               width: 100%;
+               top: 0;
+               left: 0;
+               height: 100%;
+               background-color: #fff;
+               opacity: 0.7;
+               z-index: -1;
+          }
+
+
+          #footer{
+               background-color: #333;
+               color: #fff;
+               height: 50vh;
+          }
+          #footer_row{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: row;
+          }
+
+          @media screen and (max-width:786px) {
+               #logo {
+                    width: 60px;
+                    height: 60px;
+               }
+              
+               
+               
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container-fluid" id="header">
+          <div class="row">
+               <div class="col-4">
+                    <img src="./images/download.png" alt="Error" id="logo" class="img-fluid  rounded-pill ms-4">
+               </div>
+               <div class="col-8 d-md-none d-block my-auto ">
+                    <i class="fa fa-bars float-end fs-2 text-white me-md-5" aria-hidden="true" id="toggle"></i>
+               </div>
+               <div class="col-md-8 my-auto d-md-block d-none" id="list_cont">
+                    <ul class="nav nav-pills float-end me-5 fs-4 text-capitalize" id="list-item">
+                         <li class="nav-item"><a href="#banner" class="nav-link">home</a></li>
+                         <li class="nav-item"><a href="#section_" class="nav-link">gallery</a></li>
+                         <li class="nav-item"><a href="#footer" class="nav-link">services</a></li>
+                         <li class="nav-item"><a href="#footer" class="nav-link">contact</a></li>
+                    </ul>
+               </div>
+          </div>
+     </div>
+
+     <!--  BANNER -->
+     <div class="container-fluid" id="banner">
+          <div class="row h-100 d-flex align-items-center justify-content-center">
+               <div class="col-md-4">
+                    <div class="card text-center p-5">
+                         <h2 class="card-title text-uppercase fs-md-1">Balaji traders</h2>
+                         <div class="card-body">
+                              <button class="btn btn-danger fs-md-4">view more</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- GALLERY  -->
+     <div class="container section py-md-5 py-4" id="section_">
+          <div class="row">
+               <div class="col-12">
+                    <h2 class="text-center fs-1">Gallery</h2>
+                    <div class="col-12 mx-auto mb-md-4 mb-2 rounded" style="height: 3px; width: 70px; background-color: #333;">
+                    </div>
+               </div>
+               <div class="col-md-4 col-sm-6 my-1">
+                    <div class="card shadow-lg">
+                         <img class="img-thumbnail"
+                              src="./images/img-1.jpg"
+                              alt="">
+                    </div>
+               </div>
+               <div class="col-md-4 col-sm-6 my-1">
+                    <div class="card shadow-lg">
+                         <img class="img-thumbnail"
+                              src="./images/img-2.jpg"
+                              alt="">
+                    </div>
+               </div>
+               <div class="col-md-4 col-sm-6 mx-auto my-1">
+                    <div class="card shadow-lg">
+                         <img class="img-thumbnail"
+                              src="./images/img-3.jpg"
+                              alt="">
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- FOOTER -->
+     <div id="footer">
+          <div class="container font-monospace">
+               <div class="row " id="footer_row" style="height: 50vh;">
+                    <div class="col-md-6 text-center">
+                         <h4 class="text-capitalize fs-2">contact info</h4>
+                         <span>012-5848879</span>
+                    </div>
+                    <div class="col-md-6 text-center">
+                         <h4 class="text-capitalize fs-2">Address</h4>
+                         <span>11/95 north colony<br>jaipur,Rajasthan</span>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div id="footer_base" class="bg-secondary">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                         <p class="text-center my-auto p-2 text-white text-capitalize lead-md">@company 2022</p>
+                    </div>
+                    
+               </div>
+          </div>
+     </div>
+
+     <script>
+          let toggle_btn = document.getElementById('toggle')
+          let list = document.getElementById('list-item')
+          let nav_item = document.querySelectorAll('.nav-item')
+          
+          let cross_ = document.createElement('li')
+          cross_.setAttribute('class','cross')
+          list.insertBefore(cross_,list.firstChild)
+          
+          let cross  = document.getElementsByClassName('cross')[0]
+          cross.innerHTML = 'X'
+          cross.style.color = '#fff'
+          cross.style.fontWeight = 'bold'
+          cross.style.width = '100%'
+          cross.style.display = 'none'
+          
+          console.log(cross)
+          cross.addEventListener('click',()=>{
+               list_cont.classList.add('d-none')
+               list_cont.style.height = "0"
+               list_cont.style.transform = "translateX(-100%)"
+          })
+
+          toggle_btn.addEventListener('click',()=>{
+               
+               list_cont.classList.remove('d-none')
+               list_cont.classList.add('list_cont')
+               list_cont.style.transform = "translateX(0%)"
+               list_cont.style.height = "45vh"
+               cross.style.display = 'block'
+               nav_item.forEach(function(item){
+                    item.classList.add('w-100')
+               })
+          })
+     </script>
+</body>
+
+</html>

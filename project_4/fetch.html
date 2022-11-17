@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>fetch method</title>
+     <link rel="stylesheet" href="./bootstrap.css">
+
+     <style>
+          .nav-link {
+               font-size: 20px;
+               padding-top: 15px;
+               padding-bottom: 15px;
+               color: #fff;
+          }
+
+          .nav-link:hover {
+               color: #fff;
+               background-color: red;
+          }
+          .nav-link:active {
+               color: #fff;
+               background-color: red;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <div class="row">
+               <div class="col">
+                    <div class="card">
+                         <img class="img-thumbnail w-25 rounded-pill"
+                              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                              alt="">
+                         <card class="body">
+                              <p class="card-text"></p>
+                         </card>
+                    </div>
+                    <div class="col-12">
+                         <ul class="nav bg-success justify-content-center">
+                              <li><a href="#" class="nav-link">Home</a></li>
+                              <li><a href="#" class="nav-link">About</a></li>
+                              <li><a href="#" class="nav-link">Bio</a></li>
+                              <li><a href="#" class="nav-link">Travel</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script>
+          let links = document.querySelectorAll('.nav-link')
+          let para = document.getElementsByClassName('card-text')[0]
+
+
+
+          // let xhttp = new XMLHttpRequest()
+          // xhttp.onreadystatechange = function () {
+          //      if (this.readyState == 4 && this.status == 200) {
+          //           console.log("success")
+          //           var data = JSON.parse(this.responseText)
+          //           links.forEach(function (item, index) {
+          //                item.addEventListener('click', () => {
+          //                     if(index == 0){
+          //                          para.innerHTML = data[0].home
+          //                     }else if(index == 1){
+          //                          para.innerHTML = data[0].About
+          //                     }else if(index == 2){
+          //                          para.innerHTML = data[0].bio
+          //                     }else {
+          //                          para.innerHTML = data[0].travel
+          //                     }
+          //                })
+          //           })
+          //      } else {
+          //           console.log("pending")
+          //      }
+          // }
+          // xhttp.open("GET", "./readme.json", true)
+          // xhttp.send()
+
+               // fetch('./readme.json').then((response)=>{
+               //      return response.json()
+               // }).then((data)=>{
+               //      links.forEach(function (item, index) {
+               //           item.addEventListener('click', () => {
+               //                if(index == 0){
+               //                     para.innerHTML = data[0].home
+               //                }else if(index == 1){
+               //                     para.innerHTML = data[0].About
+               //                }else if(index == 2){
+               //                     para.innerHTML = data[0].bio
+               //                }else {
+               //                     para.innerHTML = data[0].travel
+               //                }
+               //           })
+               //      })
+               // }).catch((error)=>{
+               //      console.log("error")
+               // })
+
+
+
+     </script>
+</body>
+
+
+
+</html>
